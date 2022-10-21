@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset = "utf-8">
+<title>Menu</title>
+</head>
+
+<body>
+
+<fieldset> <!-- Kreiranje ramka okolu celata strana -->
+<h1>Dado Tea Lunch Special</h1>
+<p>Monday through Friday <br> 11am - 3pm <br>$9.95 plus tax</p>
+<p>Includes sandwich, snack and drink.</p>
+
+<form method = "post" action = "#">
+<fieldset> <!-- Kreiranje ramka za Order Information -->
+<legend>Order Information</legend>
+
+<p><label><b>Name: </b><br>
+<input name = "name" type = "text" size = "25"
+maxlength = "30"></lable></p>
+
+<input type="radio" name="orderinformation" value="Here"><label for="Here">Here</label><br>
+<input type="radio" name="orderinformation" value="To go"><label for="To go">To Go</label>
+<br>
+
+
+</fieldset> <!-- Zatvoranje ramka za Order Information -->
+
+<fieldset> <!-- Kreiranje ramka za Sandwiches -->
+<legend>Sandwiches</legend>
+
+
+<p><b>Monday</b><br>
+<input type = "radio" name = "sandwiches" value = "Tomato Mozzarella"><label for = "Tomato Mozzarela">Tomato Mozzarella</label><br>
+<input type = "radio" name = "sandwiches" value = "Chicken Salad"><label for = "Chicken Salad">Chicken Salad</label><br></p>
+ 
+
+<p><b> Tuesday</b><br>
+<input type = "radio" name = "sandwiches" value = "Greek Salad Wrap"><label for = "Greek Salad Wrap">Greek Salad Wrap</label><br>
+<input type = "radio" name = "sandwiches" value = "Toto Wrap"><label for = "Toto Wrap">Toto Wrap</label><br></p>
+
+
+<p><b> Wednesday</b><br>
+<input type = "radio" name = "sandwiches" value = "Red Pepper Hummus"><label for = "Red Pepper Hummus">Red Pepper Hummus</label><br>
+<input type = "radio" name = "sandwiches" value = "Roasted Turkey"><label for = "Roasted Turkey">Roasted Turkey</label><br></p>
+
+
+<p><b> Thursday</b><br>
+<input type = "radio" name = "sandwiches" value = "Carrot-Ginger Hummus Wrap"><label for = "Carrot-Ginger Hummus Wrap">Carrot-Ginger Hummus Wrap</label><br>
+<input type = "radio" name = "sandwiches" value = "Egg Salad"><label for = "Egg Salad">Egg Salad</label><br></p>
+
+
+<p><b> Friday</b><br>
+<input type = "radio" name = "sandwiches" value = "Dado Wrap"><label for = "Dado Wrap">Dado Wrap</label><br>
+<input type = "radio" name = "sandwiches" value = "Tuna Salad"><label for = "Dado Wrap">Tuna Salad</label><br></p>
+
+<hr> <!-- Tag za kreiranje horizontalna linija -->
+
+<input type = "checkbox" name = "bread" value = "Gluten Free Bread"><label for = "Gluten Free Bread">Gluten Free Bread (75¢ extra)</label><br>
+<br>
+
+</fieldset> <!-- Zatvoranje ramka za Sandwiches -->
+
+<fieldset> <!-- Kreiranje ramka za Snack -->
+<legend>Snack</legend> 
+
+<p><b>Snacks</b><br>
+<input type = "radio" name = "snack" value = "Apple"><label for = "Apple">Apple</label><br>
+<input type = "radio" name = "snack" value = "Banana"><label for = "Banana">Banana</label><br>
+<input type = "radio" name = "snack" value = "Potato Chips"><label for = "Potato Chips">Potato Chips</label></p>
+
+</fieldset> <!-- Zatvoranje ramka za Snack -->
+
+<fieldset> <!-- Kreiranje ramka za Drink -->
+<legend>Drink</legend>
+
+<p><label><b>Drinks</b><br>
+               <select name = "drinks">
+                  <option>Coffee</option> <!-- So tagot option se definira opcija vo spisokot za izbor -->
+                  <option>Iced Coffe</option>
+                  <option>Organic Peppermint</option>
+                  <option>Hot Green Tea - Sencha</option>
+                  <option>Iced Green Tea - Sencha</option>
+                  <option selected>Hot Black Tea - Keemun</option>
+                  <option>Iced Black Tea - Keemun</option>
+               </select>
+            </label></p>            
+<hr> <!-- Tag za kreiranje horizontalna linija -->
+
+  <input type="checkbox" name="large-drink" value="Large Drink"><label for="Large Drink">Large drink (75¢ extra)</label>
+  <br>   
+
+</fieldset> <!-- Zatvoranje ramka za Drink -->
+
+<p><input type = "submit" value = "Place Order"></p>
+<br>
+
+</form>
+</fieldset> <!-- Zatvoranje ramka okolu celata strana -->
+</body>
+</html>
