@@ -1,0 +1,84 @@
+h1 {
+    color: rgb(4, 161, 28); 
+    text-shadow: -3px 3px 5px dimgrey; 
+    text-align:left;
+    font-weight:bold;
+    font-family: cursive;
+  }
+  
+  body {
+    background-color: rgb(255, 255, 255);
+  }
+
+img{
+  width: 15%;
+  position: relative;
+  animation: blinker 2s linear infinite;
+}
+
+@keyframes blinker {
+  50% { opacity: 0; }
+}
+
+@keyframes blin {
+  50% { opacity: 0; }
+}
+
+  legend{
+    font-style:oblique;
+    font-weight: bold;
+    font-family: cursive;
+  }
+
+  label{
+    font-weight: normal;
+    font-family: cursive;
+  }
+
+  hr{
+    font-weight: bold;
+  }
+  
+  .color{
+    color: rgb(150, 7, 7);
+    font-weight: bold;
+    font-family: cursive;
+   }
+
+  .frame{
+    border-color: rgb(4, 161, 28);
+    font-weight: bold;
+    background-color: rgb(137, 198, 146);
+    }
+
+  .tekst{
+    text-align:left;
+    font-style: oblique;
+    border: 3px solid rgb(4, 161, 28);
+    padding: 5px 20px;
+    background: rgb(150, 7, 7);
+    width: 200px;
+    text-align: center;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    color: white;
+    transition: width 2s;
+  }
+  .tekst:hover {
+    width: 300px;
+  }
+
+  .placeorder{
+    background-color: rgb(150, 7, 7); 
+    color: white; 
+    border: 2px solid rgb(4, 161, 28);
+    font-family: cursive;
+    box-shadow: 25px 25px 50px rgb(4, 161, 28);
+  }
+  hr{
+    border: 1px solid rgb(150, 7, 7);
+  }
+  
+  p{
+    font-family: cursive;
+  }
