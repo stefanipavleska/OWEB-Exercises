@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Blog</title>
+    </head>
+    <style>
+        body {
+            background-color: rgb(237, 237, 210);
+    text-align: center;
+}
+
+h1 {
+    font-size: 40px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+textarea {
+    font-size: 18px;
+    background-color: rgb(185, 208, 208);
+    border-radius: 20px;
+}
+
+button {
+  background-color: rgb(208, 129, 65);
+  border: none;
+  color: black;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.data{
+    background-color:rgb(208, 129, 65);
+}
+h3{
+text-align: left;
+}
+
+    </style>
+    <script>
+document.getElementById("blog1").value = "";
+document.getElementById("blog2").value = "";
+
+var button = document.getElementById("publish");
+var text = document.getElementById("blog2");
+
+function objavi() {
+var naslov = document.getElementById("blog1").value;
+var tekst = document.getElementById("blog2").value;
+
+
+        var blogTekst = document.createElement("p");
+        let blogNaslov = document.createElement("h2");
+        blogNaslov.innerHTML = text;
+        
+        blogTekst.appendChild(blogTitle);
+
+        const d = new Date();
+      document.getElementById("demo").innerHTML = d;
+
+}
+
+
+button.addEventListener("click", objavi, false);
+
+
+    </script>
+    <body>
+        <h1>Blog</h1>
+        <div>
+            <textarea id="blog1" placeholder="Blog title" rows="1" cols="10">Cheesecake</textarea><br><br>
+            <img src="cheescake.png" width="15%" height="15%">
+            <textarea id="blog2" placeholder="Strat writing here..." rows="10" cols="100">
+                Cheesecake is a sweet dessert consisting of one or more layers. The main, and thickest, layer consists of a mixture of a soft, fresh cheese (typically cottage cheese, cream cheese or ricotta), eggs, and sugar. If there is a bottom layer, it most often consists of a crust or base made from crushed cookies (or digestive biscuits), graham crackers, pastry, or sometimes sponge cake.[1] Cheesecake may be baked or unbaked (and is usually refrigerated).
+
+Cheesecake is usually sweetened with sugar and may be flavored in different ways. Vanilla, spices, lemon, chocolate, pumpkin, or other flavors may be added to the main cheese layer. Additional flavors and visual appeal may be added by topping the finished dessert with fruit, whipped cream, nuts, cookies, fruit sauce, chocolate syrup, or other ingredients.
+            </textarea><br><br>
+    </div>
+        <h1>You can write your blog here!</h1><br>
+        <div>
+            <p id="demo"></p>
+                <textarea id="blog1" placeholder="Blog title" rows="1" cols="150"></textarea><br><br>
+                <textarea id="blog2" placeholder="Strat writing here..." rows="18" cols="150"></textarea><br><br>
+                <button id="publish" type="submit">Publish</button>
+        </div>
+        
+
+    </body>
+</html>

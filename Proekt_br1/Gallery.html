@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+  
+            body {
+                position: absolute;
+                left: 0%;
+                text-align: center;
+                background-color: white;
+            }
+    
+            .container {
+                justify-content: center;
+                align-items: center;
+                display: flex;
+                height: 100%;
+                text-align: center;
+            }
+            .button1 {
+                width: 30px;
+                height: 30px;
+            }
+            .komentar{
+                width: 30px;
+                height: 30px; 
+            }
+            .spodeli{
+                width: 30px;
+                height: 30px; 
+            }
+            .insta{
+                width: 35px;
+                height: 35px; 
+            }
+            h1 {
+                color: black;
+                margin: 0 50px;
+                font-size: 30px;
+            }
+            .slika1{
+                width: 30%;
+                height: 30%;
+            }
+            .slika2{
+                width: 50%;
+                height: 50%;
+            }
+            .slika3{
+                width: 30%;
+                height: 30%;
+            }
+            #comment-box, #post {
+             border: none;
+             border-radius: 5px;
+}
+            #post:hover{
+            background-color: rgb(255, 20, 20);
+}
+p{
+font-size: medium;
+}
+        </style>
+    </head>
+  
+    <body>
+       <h1><img src = "instagram.png" class="insta"> Instagram</h1>
+       <img class ="slika1" src = "slika3.png">
+        <div = "container">
+        
+            <img src="heart.png" class= "button1" onclick="zgolemi1()">
+            <img src = "comment.png" class="komentar">
+            <img src = "share.png" class="spodeli">
+        </div>
+        <div = "container">
+
+        <input type="text" id="comment-box" placeholder="Enter comment">
+            <button id="post">Post</button>
+            <ul id="unordered">
+               
+           </ul>
+           <div>
+            <p>Total likes:</p>
+            <p id="broi"></p>
+        </div>
+        </div>
+        <img class="slika2" src="nature.png">
+        <div = "container">
+        
+            <img src="heart.png" class= "button1" onclick="zgolemi2()">
+            <img src = "comment.png" class="komentar">
+            <img src = "share.png" class="spodeli">
+        </div>
+        <div = "container">
+
+        <input type="text" id="comment-box1" placeholder="Enter comment">
+            <button id="post1">Post</button>
+            <ul id="unordered1">
+               
+           </ul>
+           <div>
+            <p>Total likes:</p>
+            <p id="broi1"> </p>
+        </div>
+        </div>
+
+        <img class="slika3" src="nature2.png">
+        <div = "container">
+        
+            <img src="heart.png" class= "button1" onclick="zgolemi3()">
+            <img src = "comment.png" class="komentar">
+            <img src = "share.png" class="spodeli">
+        </div>
+        <div = "container">
+
+        <input type="text" id="comment-box2" placeholder="Enter comment">
+            <button id="post2">Post</button>
+            <ul id="unordered2">
+               
+           </ul>
+           <div>
+            <p>Total likes:</p>
+            <p id="broi2"> </p>
+        </div>
+        </div>
+        <script>
+            var like = 0;
+  
+            document.getElementById("broi").innerText = like;
+  
+            function zgolemi1() {
+                like = like + 1;
+                document.getElementById("broi").innerText = like;
+            }
+            var post= document.getElementById("post");
+            post.addEventListener("click", function(){
+            var commentBoxValue= document.getElementById("comment-box").value;
+ 
+            var li = document.createElement("li");
+            var text = document.createTextNode(commentBoxValue);
+            li.appendChild(text);
+            document.getElementById("unordered").appendChild(li);
+        });
+
+            function zgolemi2() {
+                like = like + 1;
+                document.getElementById("broi1").innerText = like;
+            }
+            var post1= document.getElementById("post1");
+            post1.addEventListener("click", function(){
+            var commentBoxValue1 = document.getElementById("comment-box1").value;
+ 
+            var li = document.createElement("li");
+            var text = document.createTextNode(commentBoxValue1);
+            li.appendChild(text);
+            document.getElementById("unordered1").appendChild(li);
+ 
+});
+
+function zgolemi3() {
+                like = like + 1;
+                document.getElementById("broi2").innerText = like;
+            }
+            var post1= document.getElementById("post2");
+            post1.addEventListener("click", function(){
+            var commentBoxValue1 = document.getElementById("comment-box2").value;
+ 
+            var li = document.createElement("li");
+            var text = document.createTextNode(commentBoxValue1);
+            li.appendChild(text);
+            document.getElementById("unordered2").appendChild(li);
+ 
+});
+            
+        </script>
+</html>
