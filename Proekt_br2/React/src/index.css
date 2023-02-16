@@ -1,0 +1,30 @@
+body {
+  margin: 0;
+  font-family:'Times New Roman', Times, serif,
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: white;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+img, h4,textarea, button, .comment-container,h1{
+  text-align: center;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+
+button{
+  border: none;
+  border-radius: 5px;
+}
+button:hover{
+    background-color: rgb(255, 20, 20);
+}

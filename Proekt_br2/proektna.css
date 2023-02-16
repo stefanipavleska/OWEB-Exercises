@@ -1,0 +1,57 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  font-family: Century;
+}
+header{
+  background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(slika.png);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+   min-height: 100px;
+}
+
+h1{
+   font-weight: bolder;
+   color: white;
+   left: 0%;
+   line-height: 100px;
+   margin-top: -100px;
+   position: absolute;
+   text-align: center;
+   top: 50%;
+   width: 100%;
+   font-size: 45px;
+   text-decoration: none;
+   font-family: Century;
+}
+
+ul{
+  float: right;
+  list-style-type: none;
+  margin-top: 30px;
+  min-height: 400px;
+  margin-right: 60px;
+  font-size: 20px;
+} 
+ul li{
+  display: inline-block;
+}
+  ul li a {
+    border: 1px solid transparent;
+    color: white;
+    transition: 0.5 ease;
+    padding: 5px 20px;
+    text-decoration: none;
+  }
+  
+  ul li a:hover {
+    background-color: #fff;
+    color: black;
+  }
+  ul li.active a{
+    background-color: #fff;
+    color: black;
+  }
+
+

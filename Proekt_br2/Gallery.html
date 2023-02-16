@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+  
+            body {
+                position: absolute;
+                left: 0%;
+                text-align: center;
+                background-color: white;
+            }
+            .button1 {
+                width: 30px;
+                height: 30px;
+            }
+            .button2 {
+                width: 30px;
+                height: 30px;
+            }
+            .button3 {
+                width: 30px;
+                height: 30px;
+            }
+            .komentar{
+                width: 30px;
+                height: 30px; 
+            }
+            .spodeli{
+                width: 30px;
+                height: 30px; 
+            }
+            .insta{
+                width: 35px;
+                height: 35px; 
+            }
+            h1 {
+                color: black;
+                margin: 0 50px;
+                font-size: 30px;
+            }
+            .slika1{
+                width: 30%;
+                height: 30%;
+            }
+            .slika2{
+                width: 50%;
+                height: 50%;
+            }
+            .slika3{
+                width: 30%;
+                height: 30%;
+            }
+            #comment-box, #post {
+             border: none;
+             border-radius: 5px;
+}
+#comment-box, #post1 {
+             border: none;
+             border-radius: 5px;
+}
+#comment-box, #post2 {
+             border: none;
+             border-radius: 5px;
+}
+            #post:hover{
+            background-color: rgb(255, 20, 20);
+}
+#post1:hover{
+            background-color: rgb(255, 20, 20);
+}
+#post2:hover{
+            background-color: rgb(255, 20, 20);
+}
+p{
+font-size: medium;
+}
+
+.container {
+                justify-content: center;
+                align-items: center;
+                display: flex;
+                height: 50%;
+                width: 50%;
+                text-align: right;
+            }
+
+        </style>
+    </head>
+  
+    <body>
+       <h1><img src = "instagram.png" class="insta"> Instagram</h1>
+       <img class ="slika1" src = "slika3.png">
+
+       <!--slika 1-->
+        <div = "container">
+        
+            <img src="heart.png" class= "button1">
+            <img id="komentar1"src = "comment.png" class="komentar">
+            <img src = "share.png" class="spodeli">
+        </div>
+
+        <div = "container">
+
+            <input type="text" id="comment-box" placeholder="Enter comment">
+                <button id="post">Post</button>
+                <ul id="unordered">
+                   
+               </ul>
+               <div>
+                <p>Total likes:</p>
+                <p id="prvo"></p>
+            </div>
+            </div>
+
+
+        <!--slika 2-->
+        <img class="slika2" src="nature.png">
+        <div = "container">
+        
+            <img id="vtora" src="heart.png" class= "button2">
+            <img  id="komentar2" src = "comment.png" class="komentar">
+            <img src = "share.png" class="spodeli">
+        </div>
+        <div = "container">
+
+        <input type="text" id="comment-box1" placeholder="Enter comment">
+            <button id="post1">Post</button>
+            <ul id="unordered1">
+               
+           </ul>
+           <div>
+            <p>Total likes:</p>
+            <p id="vtoro"></p>
+        </div>
+        </div>
+
+        <!--slika 3-->
+        <img class="slika3" src="nature2.png">
+        <div = "container">
+        
+            <img id="treta" src="heart.png" class= "button3">
+            <img id="komentar3" src = "comment.png" class="komentar">
+            <img src = "share.png" class="spodeli">
+        </div>
+        <div = "container">
+
+        <input type="text" id="comment-box2" placeholder="Enter comment">
+            <button id="post2">Post</button>
+            <ul id="unordered2">
+               
+           </ul>
+           <div>
+            <p>Total likes:</p>
+            <p id="treto"></p>
+        </div>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <script>
+       $(document).ready(function(){
+
+    $(".button1").each(function(){
+        var counter = 0;
+        $(this).click(function(){
+            counter++;
+            $("#prvo").text(counter);
+        })
+    })
+
+    $(".button2").each(function(){
+        var counter = 0;
+        $(this).click(function(){
+            counter++;
+            $("#vtoro").text(counter);
+        })
+    })
+    $(".button3").each(function(){
+        var counter = 0;
+        $(this).click(function(){
+            counter++;
+            $("#treto").text(counter);
+        })
+    })
+
+    $("#post").click(function(){
+        var input = $('#comment-box').val();
+        $('#unordered').append(input + '<br>');
+        $('#comment-box').val('');
+
+    });
+
+    $("#post1").click(function(){
+        var input = $('#comment-box1').val();
+        $('#unordered1').append(input + '<br>');
+        $('#comment-box1').val('');
+
+    });
+    $("#post2").click(function(){
+        var input = $('#comment-box2').val();
+        $('#unordered2').append(input + '<br>');
+        $('#comment-box2').val('');
+
+    });
+});
+            
+        </script>
+</html>

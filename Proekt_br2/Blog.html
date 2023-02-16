@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<meta charset = "utf-8">
+<title></title>
+</head>
+
+<style>
+#title{
+    border-radius: 20px;
+}
+#content{
+    border-radius: 20px;
+}
+button {
+  background-color: rgb(205, 130, 68);
+  border: none;
+  color: black;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+textarea {
+    font-size: 18px;
+    background-color: rgb(185, 208, 208);
+    border-radius: 20px;
+}
+h1{
+    text-align: center;
+}
+
+</style>
+
+<body>
+    <div>
+        <textarea id="blog1" placeholder="Blog title" rows="1" cols="10">Cheesecake</textarea><br><br>
+        <img src="cheescake.png" width="15%" height="15%">
+        <textarea id="blog2" placeholder="Strat writing here..." rows="10" cols="100">
+            Cheesecake is a sweet dessert consisting of one or more layers. The main, and thickest, layer consists of a mixture of a soft, fresh cheese (typically cottage cheese, cream cheese or ricotta), eggs, and sugar. If there is a bottom layer, it most often consists of a crust or base made from crushed cookies (or digestive biscuits), graham crackers, pastry, or sometimes sponge cake.[1] Cheesecake may be baked or unbaked (and is usually refrigerated).
+
+Cheesecake is usually sweetened with sugar and may be flavored in different ways. Vanilla, spices, lemon, chocolate, pumpkin, or other flavors may be added to the main cheese layer. Additional flavors and visual appeal may be added by topping the finished dessert with fruit, whipped cream, nuts, cookies, fruit sauce, chocolate syrup, or other ingredients.
+        </textarea><br><br>
+</div>
+
+
+<div class = "title">
+<h1>You can write your blog here!</h1></div>
+
+<textarea id="title" rows="1" cols="50" placeholder="Blog title"></textarea>
+<br>
+<textarea id="content" rows="10" cols="95" placeholder="Start writing here..."></textarea>
+<br><br>
+<button class = "submit" onclick = "post()">Publish</button>
+
+
+<div id = "post"></div>
+
+<script>
+
+function post(){
+
+var title = $("#title").val();
+var contentt = $("#content").val();
+var date = new Date();
+var day = String(date.getDate());
+var month = String(date.getMonth() + 1);
+var year = date.getFullYear();
+var time = date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
+
+
+date = 'Date:' + day + '.' + month + '.' + year + ' ' + 'Time:' + time; 
+
+
+if(title != " " && contentt != " "){
+$("#post").append(document.createElement("div"));
+$("#post").first().addClass("centar");
+$("#post").first().css("background-color", "rgb(185, 208, 208)");
+$("#post").first().css("padding", "20px");
+$("#post").first().css("margin-top","20px");
+$("#post").first().css("border", "1px solid black");
+$("#post").first().css("border-radius", "20px");
+
+
+var datum = document.createElement("h4");
+datum.style.textAlign = "right";
+datum.innerHTML = date;
+datum.style.fontFamily = "Times New Roman";
+$("#post").first().append(datum);
+
+var titlee = document.createElement("h2");
+titlee.style.textAlign = "left";
+titlee.innerHTML = title;
+titlee.style.fontFamily = "Times New Roman";
+$("#post").first().append(titlee);
+
+var tekst = document.createElement("p");
+tekst.style.textAlign = "left";
+tekst.innerHTML = contentt;
+tekst.style.fontFamily = "Times New Roman";
+$("#post").first().append(tekst);
+}
+
+}
+
+</script>
+
+</body>
+</html>
